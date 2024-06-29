@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pediatrics Department</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('./assets/images/hero-bg.png') no-repeat center center/cover;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: black;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: center; /* Center the navbar horizontally */
+      align-items: center;
+      padding: 15px 0; /* Adjusted padding */
+    }
+
+    .navbar .logo {
+      height: 40px;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 0 20px; /* Adjusted margin */
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: hsl(192, 89%, 28%);
+    }
+
+    .header {
+      background-color: white;
+      padding: 40px 0; /* Adjusted padding */
+      text-align: center;
+      color: black;
+      margin-top: 120px; /* Adjusted margin-top */
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: hsl(192, 89%, 28%);
+      margin-top: 0;
+    }
+
+    .department-info {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: hsl(192, 89%, 28%);
+      margin-top: 15px;
+    }
+
+    p {
+      line-height: 1.8;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #666;
+      font-size: 0.8em;
+    }
+
+    /* Media query for mobile view */
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 15px 0; /* Adjusted padding */
+      }
+
+      .navbar .logo {
+        margin-bottom: 10px;
+      }
+
+      .navbar a {
+        margin: 5px 0;
+      }
+
+      .header {
+        padding: 40px 20px; /* Adjusted padding */
+        margin-top: 80px; /* Adjusted margin-top */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html"><img src="logo.png" alt="Logo" class="logo"></a>
+    <div class="navigation">
+      <a href="index.html">Home</a>
+      <a href="ourServices.html">Services</a>
+      <a href="contactUs.html">Contact</a>
+    </div>
+  </div>
+  
+  <div class="header">
+    <h1>Pediatrics Department</h1>
+  </div>
+  
+  <div class="container">
+    <div class="department-info">
+      <h2>About Pediatrics Department</h2>
+      <p>Our Pediatrics Department offers compassionate care for your child, from well-child visits and immunizations to treatment for acute illnesses and chronic conditions. Our team also provides nutritional counseling and behavioral health services. We prioritize clear communication and a comfortable environment for both children and parents. Schedule your appointment today and ensure your child's health and well-being thrives under our care.</p>
+      <p>Our team of pediatricians and pediatric specialists are committed to promoting the health and well-being of children through preventive care, diagnosis, and treatment of various pediatric conditions.</p>
+    </div>
+    <div class="department-info">
+      <h2>Services Offered</h2>
+      <ul>
+        <li>Well-child check-ups and vaccinations</li>
+        <li>Management of acute and chronic illnesses</li>
+        <li>Developmental assessments</li>
+        <li>Specialized care for pediatric conditions such as asthma, allergies, and childhood obesity</li>
+      </ul>
+    </div>
+    <div class="department-info">
+      <h2>Meet Our Pediatricians</h2>
+      <ul>
+        <li>Dr. Solomon Getaye, MD</li>
+        <li>Dr. Michael Melaku, MD</li>
+        <li>Dr. Sara Mekonen, MD</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer">
+    <p>&copy; 2024 Health Informatics. All rights reserved.</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orthopedics Department</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('./assets/images/hero-bg.png') no-repeat center center/cover;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: black;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: center; /* Center the navbar horizontally */
+      align-items: center;
+      padding: 15px 0; /* Adjusted padding */
+    }
+
+    .navbar .logo {
+      height: 40px;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 0 20px; /* Adjusted margin */
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: hsl(192, 89%, 28%);
+    }
+
+    .header {
+      background-color: white;
+      padding: 40px 0; /* Adjusted padding */
+      text-align: center;
+      color: black;
+      margin-top: 120px; /* Adjusted margin-top */
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: hsl(192, 89%, 28%);
+      margin-top: 0;
+    }
+
+    .department-info {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: hsl(192, 89%, 28%);
+      margin-top: 15px;
+    }
+
+    p {
+      line-height: 1.8;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #666;
+      font-size: 0.8em;
+    }
+
+    /* Media query for mobile view */
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 15px 0; /* Adjusted padding */
+      }
+
+      .navbar .logo {
+        margin-bottom: 10px;
+      }
+
+      .navbar a {
+        margin: 5px 0;
+      }
+
+      .header {
+        padding: 40px 20px; /* Adjusted padding */
+        margin-top: 80px; /* Adjusted margin-top */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html"><img src="logo.png" alt="Logo" class="logo"></a>
+    <div class="navigation">
+      <a href="index.html">Home</a>
+      <a href="ourServices.html">Services</a>
+      <a href="contactUs.html">Contact</a>
+    </div>
+  </div>
+  
+  <div class="header">
+    <h1>Orthopedics Department</h1>
+  </div>
+  
+  <div class="container">
+    <div class="department-info">
+      <h2>About Orthopedics Department</h2>
+      <p>Our Orthopedics Department provides comprehensive care for musculoskeletal conditions, including bone fractures, joint injuries, and degenerative diseases. Our team of orthopedic surgeons and specialists are dedicated to restoring mobility and improving the quality of life for our patients.</p>
+      <p>We offer advanced treatment options, including minimally invasive surgery, joint replacement, and rehabilitation services, tailored to meet the unique needs of each patient.</p>
+    </div>
+    <div class="department-info">
+      <h2>Services Offered</h2>
+      <ul>
+        <li>Fracture care</li>
+        <li>Joint replacement surgery</li>
+        <li>Arthroscopic surgery</li>
+        <li>Sports medicine</li>
+        <li>Orthopedic rehabilitation</li>
+      </ul>
+    </div>
+    <div class="department-info">
+      <h2>Meet Our Orthopedic Surgeons</h2>
+      <ul>
+        <li>Dr. yemnaneh Tamirat, MD</li>
+        <li>Dr. Erzra Bekalu, MD</li>
+        <li>Dr. Mirtnesh Dawit, MD</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer">
+    <p>&copy; 2024 Health Informatics. All rights reserved.</p>
+  </div>
+</body>
+</html>

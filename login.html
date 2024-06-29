@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login & Registration Form</title>
+  <!---Custom CSS File--->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      min-height: 100vh;
+      width: 100%;
+      background: url('./assets/images/hero-bg.png') no-repeat center center/cover;
+      margin-top: auto;
+      background-color: hsl(192, 89%, 28%);
+    }
+    .navbar {
+      background-color: #161718;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    .navbar a {
+      float: left;
+      display: block;
+      color: #fff;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    .navbar a:hover {
+      background-color:  #0b61c2;
+    }
+    .navbar .logo {
+      height: 40px;
+      margin-right: auto;
+    }
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 430px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 7px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+      margin-top: 20px;
+    }
+    .container .registration {
+      display: none;
+    }
+    #check:checked ~ .registration {
+      display: block;
+    }
+    #check:checked ~ .login {
+      display: none;
+    }
+    #check {
+      display: none;
+    }
+    .container .form {
+      padding: 2rem;
+      padding-top: 4rem;
+    }
+    .form header {
+      font-size: 2rem;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .form input {
+      height: 60px;
+      width: 100%;
+      padding: 0 15px;
+      font-size: 17px;
+      margin-bottom: 1.3rem;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      outline: none;
+    }
+    .form input:focus {
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    }
+    .form a {
+      font-size: 16px;
+      color: #4196db;
+      text-decoration: none;
+    }
+    .form a:hover {
+      text-decoration: underline;
+    }
+    .form input.button, .form button.button {
+      color: #fff;
+      background: hsl(192, 89%, 28%);
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-top: 1.7rem;
+      cursor: pointer;
+      transition: 0.4s;
+      border: none;
+      padding: 15px;
+      border-radius: 6px;
+    }
+    .form input.button:hover, .form button.button:hover {
+      background: #70adf3;
+    }
+    .signup {
+      font-size: 17px;
+      text-align: center;
+    }
+    .signup label {
+      color: #4580b8;
+      cursor: pointer;
+    }
+    .signup label:hover {
+      text-decoration: underline;
+    }
+    .success-message {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: rgb(50, 211, 98);
+      margin:10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html"><img src="logo.png" alt="Logo" class="logo"></a>
+    <a href="index.html">Home</a>
+    <a href="aboutUs.html">About</a>
+    <a href="contactUs.html">Contact</a>
+  </div>
+  <div class="container">
+    <input type="checkbox" id="check">
+    <div class="login form">
+      <header>I am a returning customer</header>
+      <form id="loginForm" onsubmit="return validateLoginForm()">
+        <input type="text" id="loginUsername" placeholder="Enter your username" required>
+        <input type="password" id="loginPassword" placeholder="Enter your password" required>
+        <a href="#">Forgot password?</a>
+        <input type="submit" class="button" value="Login">
+      </form>
+      <div class="signup">
+        <span class="signup">Don't have an account?
+          <label for="check">Signup</label>
+        </span>
+      </div>
+    </div>
+    <div class="registration form">
+      <header>Signup</header>
+      <form id="registrationForm" onsubmit="return handleRegistration(event)">
+        <input type="text" id="fullName" placeholder="Enter your full name" required>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <input type="tel" id="phoneNumber" placeholder="Mobile number" pattern="[0-9]{10}" required>
+        <input type="password" id="password" placeholder="Create a password" required>
+        <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+        <input type="submit" class="button" value="Register">
+      </form>
+      <div class="success-message" id="successMessage">Registration successful! Redirecting...</div>
+      <div class="signup">
+        <span class="signup">Already have an account?
+          <label for="check">Login</label>
+        </span>
+      </div>
+    </div>
+  </div>
+  <script>
+    function goToHome() {
+      window.location.href = 'index.html'; // Replace 'index.html' with your home page URL
+    }
+
+    function validateLoginForm() {
+      const username = document.getElementById('loginUsername').value;
+      const password = document.getElementById('loginPassword').value;
+
+      if (username === "" || password === "") {
+        alert("All fields are required.");
+        return false;
+      }
+
+      return true;
+    }
+
+    function validateRegistrationForm() {
+      const fullName = document.getElementById('fullName').value;
+      const email = document.getElementById('email').value;
+      const phoneNumber = document.getElementById('phoneNumber').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+
+      if (fullName === "" || email === "" || phoneNumber === "" || password === "" || confirmPassword === "") {
+        alert("All fields are required.");
+        return false;
+      }
+
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!email.match(emailPattern)) {
+        alert("Please enter a valid email address.");
+        return false;
+      }
+
+      if (phoneNumber.length !== 10) {
+        alert("Please enter a valid 10-digit mobile number.");
+        return false;
+      }
+
+      if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;
+      }
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return false;
+      }
+
+      return true;
+    }
+
+    function handleRegistration(event) {
+      event.preventDefault();
+      if (validateRegistrationForm()) {
+        document.getElementById('registrationForm').reset();
+        document.getElementById('successMessage').style.display = 'block';
+        setTimeout(() => {
+          window.location.href = 'appointment.html';
+        }, 2000); // Redirect after 2 seconds
+      }
+    }
+  </script>
+</body>
+</html>

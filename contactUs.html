@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: hsl(192, 89%, 28%);
+      --primary-color-hover: hsl(210, 30%, 96%);
+      --background-color: hsl(210, 100%, 95%);
+      --container-background-color: #fff;
+      --text-color: #333;
+      --border-color: #ddd;
+      --footer-color: #666;
+      --font-family: 'Roboto', Arial, sans-serif;
+    }
+
+    body {
+      font-family: var(--font-family);
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+
+    .header {
+      background-color: var(--primary-color);
+      padding: 30px 0;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+
+    .header img {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      height: 50px;
+      width: auto;
+      animation: rotate 8s linear infinite;
+    }
+
+    .header nav {
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 500;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    .header nav a:hover {
+      color: var(--primary-color-hover);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: var(--container-background-color);
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: var(--primary-color);
+    }
+
+    form {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 15px;
+      border: 1px solid var(--border-color);
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-family: var(--font-family);
+      font-size: 16px;
+      line-height: 1.5;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+      outline: none;
+    }
+
+    textarea {
+      height: 200px;
+      resize: none;
+    }
+
+    input[type="submit"] {
+      background-color: var(--primary-color);
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: var(--primary-color-hover);
+      transform: scale(1.05);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--footer-color);
+      font-size: 14px;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: translateY(-50%) rotate(0deg);
+      }
+      to {
+        transform: translateY(-50%) rotate(-360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="logo.png" alt="Logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="contactUs.html">Contact Us</a>
+    </nav>
+  </div>
+  <div class="container">
+    <h1>Contact Us</h1>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  <div class="footer">
+    <p>&copy; 2024 Health Informatics. All rights reserved.</p>
+  </div>
+</body>
+</html>

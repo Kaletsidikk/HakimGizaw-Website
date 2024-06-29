@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7f6;
+      color: #333;
+    }
+
+    .header {
+      background-color:  hsl(192, 89%, 28%);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      position: relative;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s;
+    }
+
+    .header:hover {
+      background-color: #ecf0f5;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transform: scale(1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .container:hover {
+      transform: scale(1.02);
+    }
+
+    h1 {
+      text-align: center;
+      color:  hsl(192, 89%, 28%);
+      margin-top: 0;
+      font-size: 2.5em;
+      transition: color 0.3s;
+    }
+
+    h1:hover {
+      color:  hsl(192, 89%, 28%);
+    }
+
+    h2 {
+      color:  hsl(192, 89%, 28%);
+      margin-top: 30px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    h2:after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background-color:  hsl(192, 89%, 28%);
+      bottom: 0;
+      left: 0;
+      transition: width 0.3s;
+    }
+
+    h2:hover:after {
+      width: 100%;
+    }
+
+    p {
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #666;
+      font-size: 0.9em;
+      padding: 20px 0;
+      background-color:  hsl(192, 89%, 28%);
+      color: #fff;
+    }
+
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer a:hover {
+      color: #ddd;
+    }
+
+    .navigation {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navigation a {
+      font-size: 16px;
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .navigation a:hover {
+      color: #ddd;
+      transform: translateY(-2px);
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 10px;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      .navigation {
+        display: none;
+        flex-direction: column;
+        background-color: #0a74da;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        border-radius: 0;
+      }
+
+      .navigation a {
+        margin: 10px 0;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+
+      .menu-icon.active + .navigation {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>About Us</h1>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="navigation">
+      <a href="index.html">Home</a>
+      <a href="ourServices.html">Services</a>
+      <a href="contactUs.html">Contact</a>
+    </div>
+  </div>
+  <div class="container">
+    <p>Welcome to <strong>Hakim Gizaw Hospital</strong>, your trusted healthcare provider. We are dedicated to delivering high-quality medical care with compassion and integrity.</p>
+    <h2>Our Mission</h2>
+    <p>Our mission is to improve the health and well-being of our community by providing accessible, patient-centered healthcare services.</p>
+    <h2>Our Team</h2>
+    <p>At <strong>Hakim Gizaw Hospital</strong>, we have a team of experienced healthcare professionals including doctors, nurses, and support staff who are committed to delivering personalized care to our patients.</p>
+    <h2>Our Services</h2>
+    <p>We offer a wide range of medical services including emergency care, primary care, specialty clinics, surgical services, diagnostic imaging, and maternity care.</p>
+    <h2>Our Values</h2>
+    <p>We uphold the values of excellence, compassion, integrity, and teamwork in everything we do. We strive to create a positive and supportive environment for our patients and staff.</p>
+    <h2>Location</h2>
+    <p>Visit us at:</p>
+    <p><strong>Hakim Gizaw Hospital</strong></p>
+    <p>Contact: <strong>+251932562963</strong> | Email: <strong>HakimGizaw@gmail.com</strong></p>
+  </div>
+  <div class="footer">
+    <p>&copy; 2024 Health informatics. All rights reserved. | <a href="privacyPolicy.html">Privacy Policy</a></p>
+  </div>
+  <script>
+    function toggleMenu() {
+      const menuIcon = document.querySelector('.menu-icon');
+      const nav = document.querySelector('.navigation');
+      menuIcon.classList.toggle('active');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

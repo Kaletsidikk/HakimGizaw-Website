@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Doctors - Hakim Gizaw Clinic</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color:  hsl(192, 89%, 28%);
+      color: white;
+      padding: 1em 0;
+      text-align: center;
+    }
+
+    .header a {
+      color: white;
+      text-decoration: none;
+      padding: 0 15px;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 2em 0;
+      background-color: #fff;
+      margin-bottom: 1em;
+    }
+
+    .doctors-section {
+      padding: 2em;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2em;
+      margin-bottom: 1em;
+    }
+
+    .doctor-card {
+      display: flex;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5em;
+      overflow: hidden;
+      max-width: 800px;
+      margin: 1.5em auto;
+    }
+
+    .doctor-img img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .doctor-info {
+      padding: 1em;
+      flex: 1;
+    }
+
+    .doctor-name {
+      font-size: 1.5em;
+      margin: 0;
+    }
+
+    .doctor-specialty {
+      font-weight: bold;
+      color: #555;
+    }
+
+    .doctor-description {
+      margin: 1em 0;
+      color: #666;
+    }
+
+    .doctor-contact {
+      display: flex;
+      gap: 1em;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      color:  hsl(192, 89%, 28%);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact-link:hover {
+      color: hsl(192, 89%, 28%);
+    }
+
+    .contact-link ion-icon {
+      margin-right: 0.5em;
+    }
+
+    footer {
+      background-color: hsl(192, 89%, 28%);
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="ourDoctors.html">Doctors</a>
+      <a href="contactUs.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Doctors Listing Section -->
+  <section class="doctors-section" id="doctors">
+    <h2 class="section-title">Our Doctors</h2>
+
+    <!-- Gynecology Doctor -->
+    <div class="doctor-card">
+      <div class="doctor-img">
+        <img src="assets/images/Serkalem Kassa.jpg" alt="Gynecology Doctor">
+      </div>
+      <div class="doctor-info">
+        <h3 class="doctor-name">Dr. Selamawit Berhanu</h3>
+        <p class="doctor-specialty">Specialty: Gynecology</p>
+        <p class="doctor-description">Dr. Selamawit is a dedicated professional with over 10 years of experience in women's health.</p>
+        <div class="doctor-contact">
+          <a href="tel:+25196746584" class="contact-link"><ion-icon name="call-outline"></ion-icon> +123456789</a>
+          <a href="mailto:dr.selamawit@gmail.com" class="contact-link"><ion-icon name="mail-outline"></ion-icon> dr.selamawit@example.com</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pulmonology Doctor -->
+    <div class="doctor-card">
+      <div class="doctor-img">
+        <img src="assets/images/dr jhon.jpg" alt="Pulmonology Doctor">
+      </div>
+      <div class="doctor-info">
+        <h3 class="doctor-name">Dr. Yohannes Tadesse</h3>
+        <p class="doctor-specialty">Specialty: Pulmonology</p>
+        <p class="doctor-description">Dr. Yohannes is a skilled pulmonologist with a passion for helping patients breathe easier.</p>
+        <div class="doctor-contact">
+          <a href="tel:+25186956837" class="contact-link"><ion-icon name="call-outline"></ion-icon> tel:+25186956837</a>
+          <a href="mailto:dr.yohannes@gmail.com" class="contact-link"><ion-icon name="mail-outline"></ion-icon> dr.yohannes@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Orthopedics Doctor -->
+    <div class="doctor-card">
+      <div class="doctor-img">
+        <img src="assets/images/dr getachew.jpg" alt="Orthopedics Doctor">
+      </div>
+      <div class="doctor-info">
+        <h3 class="doctor-name">Dr. Getachew Wolde</h3>
+        <p class="doctor-specialty">Specialty: Orthopedics</p>
+        <p class="doctor-description">Dr. Getachew specializes in orthopedic surgery and has helped numerous patients recover from injuries.</p>
+        <div class="doctor-contact">
+          <a href="tel:+251723086852" class="contact-link"><ion-icon name="call-outline"></ion-icon> el:+251723086852</a>
+          <a href="mailto:dr.getachew@gmail.com" class="contact-link"><ion-icon name="mail-outline"></ion-icon> dr.getachew@gmail.com
+      </div>
+ 
+
+  
+    <!-- Ionicons Script -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+  </body>
+  
+  </html>
