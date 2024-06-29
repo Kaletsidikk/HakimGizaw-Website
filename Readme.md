@@ -47,5 +47,5 @@ To view this project locally, follow these steps:
 
 1. **Clone the repository**:
    ```sh
-git clone https://github.com/kaletsidikk/hakim-Gizaw-website.git
+git clone https://github.com/kaletsidikk/hakimGizaw-Website.git
 cd hakim-Gizaw-website
